@@ -1,0 +1,15 @@
+@import url(fonts/Zenzai\ Itachi.ttf);
+
+@font-face {
+    font-family: zenzai ;
+    src: url(fonts/Zenzai\ Itachi.ttf);
+}
+
+body{
+    font-family: 'zenzai';
+}
+
+/*@font-face{
+    font family
+    src=url
+    */

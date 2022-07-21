@@ -1,0 +1,292 @@
+@import url(fonts/Zenzai\ Itachi.ttf);
+@import url(fonts/Hashiba.ttf);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+
+@font-face {
+    font-family: zenzai ;
+    src: url(fonts/Zenzai\ Itachi.ttf);
+}
+
+
+@font-face {
+    font-family: Hashi ;
+    src: url(fonts/Hashiba.ttf);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  animation: fun 0.4s;
+
+}
+
+@keyframes fun{
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes woosh{
+    from {top: 0px; opacity:1} 
+    to {top:-300px; opacity:0}
+  }
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*CUPONES*/
+.coupon {
+    border: 5px dotted #bbb; /* Dotted border */
+    width: 80%;
+    border-radius: 15px; /* Rounded border */
+    margin: 0 auto; /* Center the coupon */
+    max-width: 600px;
+  }
+  
+  .container {
+    padding: 2px 16px;
+    background-color: #f1f1f1;
+  }
+  
+  .promo {
+    background: #ccc;
+    padding: 3px;
+  }
+  
+  .expire {
+    color: red;
+  }
+
+/*FLIP BOX*/
+  .flip-box {
+      margin: 10px;
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 2px groove red;
+    border-radius: 10px;
+
+    perspective: 1000px;
+
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    background-image: url(img/lfckit.jpg);
+    background-size: 100% 100%;
+    color: black;
+  }
+  
+  .flip-box-back {
+    background-image: url(img/bshirt.jpg);
+    background-size: 100% 100%;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .front-shirt{
+      align-self: center;
+      font-weight: bolder;
+      transform: translateY(60px);
+  }
+
+  .back-shirt{
+      align-self: center;
+      transform: translateY(130px);
+      font-weight: bold;
+      color: black
+  }
+
+.promos{
+    font-weight: bold;
+    max-width: 550px;
+}
+
+@media (max-width: 550px) {
+    .promos {
+        margin-left: 25px;
+    }
+}
+
+.dark-card{
+    width: 300px; 
+    margin: 5px; 
+    box-shadow: 3px 3px grey; 
+    color: white;
+}
+
+.box {
+    border: 2px groove silver;
+    border-radius: 10px;
+    background-color: red;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 16px;
+    margin: 16px 0;
+  }
+  
+  /* Clear floats after containers */
+  .box::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+  .box img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  /* Increase the font-size of a span element */
+  .box span {
+    font-size: 20px;
+    margin-right: 15px;
+  }
+  
+  /* Add media queries for responsiveness. This will center both the text and the image inside the container */
+  @media (max-width: 500px) {
+    .box {
+      text-align: center;
+    }
+  
+    .box img {
+      margin: auto;
+      float: none;
+      display: block;
+    }
+  }
+
+  .glow{
+      animation: yes 0.5s infinite alternate-reverse;
+      border-radius: 15px;
+  }
+  
+@keyframes yes{
+    from{
+      box-shadow: 2px 2px 2px 2px purple;
+    }
+    to{
+      box-shadow: 4px 4px 4px 4px pink;
+    }
+  }
+
+
+
+/*===========================
+    clients-01 css 
+===========================*/
+.client-logo-area .section-title-two {
+    text-align: center;
+    max-width: 550px;
+    margin: auto;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 5;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .client-logo-area .section-title-two {
+      margin-bottom: 45px;
+    }
+  }
+  @media (max-width: 767px) {
+    .client-logo-area .section-title-two {
+      margin-bottom: 35px;
+    }
+  }
+  .client-logo-area .section-title-two span {
+    text-transform: capitalize;
+    color: var(--white);
+    background: var(--primary);
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    border-radius: 4px;
+  }
+  .client-logo-area .section-title-two h2 {
+    margin-bottom: 15px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .client-logo-area .section-title-two h2 {
+      font-size: 2rem;
+      line-height: 2.8rem;
+    }
+  }
+  @media (max-width: 767px) {
+    .client-logo-area .section-title-two h2 {
+      font-size: 1.5rem;
+      line-height: 1.9rem;
+    }
+  }
+  .client-logo-area .section-title-two p {
+    color: var(--dark-3);
+  }
+  
+  /*===== Client Logo One =====*/
+  .client-logo-one {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .client-logo-one .single-client {
+    margin-top: 30px;
+  }
+
